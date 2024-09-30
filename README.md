@@ -4,6 +4,6 @@
 - The website use for selling the barkery make by my wife
 
   ## Tech use in this website
-  - Firebase
-  - Reactjs
+  - Mongo
+  - Nextjs
   - Tailwind css

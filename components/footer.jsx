@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Column 1: Logo, Address, and Telephone */}
           <div className="flex flex-col items-start">
             <Image
-              src="/logo.png" // replace with your logo path
+              src="/logo.svg" // replace with your logo path
               alt="Cake Shop Logo"
               width={150}
               height={50}

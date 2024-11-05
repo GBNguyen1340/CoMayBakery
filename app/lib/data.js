@@ -1,24 +1,26 @@
+import { Cake, Coffee, Gift, Utensils } from "lucide-react";
+
 export const services = [
   {
-    title: "Rau câu bánh sinh nhật",
-    description: "Bánh rau câu sinh nhật theo thiết kế.",
-    imageUrl: "https://iili.io/2xxCz9S.jpg",
+    icon: <Cake className="w-8 h-8 text-white" />,
+    title: "Bánh rau câu sinh nhật",
+    description: "Những chiếc bánh rau câu độc đáo và đẹp mắt, là món quà tuyệt vời cho ngày sinh nhật đáng nhớ."
   },
   {
-    title: "Rau câu cupcakes",
-    description: "Set bánh cupcakes phù hợp dùng làm quà tặng.",
-    imageUrl: "https://iili.io/2xxCTN9.jpg",
+    icon: <Gift className="w-8 h-8 text-white" />,
+    title: "Bánh rau câu cho dịp lễ",
+    description: "Bánh rau câu được thiết kế đặc biệt cho các dịp lễ, mang đến không khí lễ hội và niềm vui."
   },
   {
-    title: "Rau câu ăn vặt",
-    description: "Gồm rau câu hũ và rau câu thú mini thích hợp ăn vặt cùng nhóm bạn.",
-    imageUrl: "https://iili.io/2xxCRou.jpg",
+    icon: <Coffee className="w-8 h-8 text-white" />,
+    title: "Bánh rau câu cupcakes",
+    description: "Những chiếc cupcake rau câu nhỏ xinh, hoàn hảo cho các bữa tiệc nhỏ và những khoảnh khắc đặc biệt."
   },
   {
-    title: "Rau câu các dịp sự kiện/lễ",
-    description: "Rau câu thiết kế phù hợp làm quà tặng trong các dịp lễ như 20/11, 20/10, 8/3.",
-    imageUrl: "https://iili.io/2xxC5Mb.jpg",
-  },
+    icon: <Utensils className="w-8 h-8 text-white" />,
+    title: "Bánh rau câu ăn vặt",
+    description: "Những miếng bánh rau câu ngon miệng, là món ăn vặt lý tưởng cho mọi thời điểm trong ngày."
+  }
 ];
 
 export const cakes = [

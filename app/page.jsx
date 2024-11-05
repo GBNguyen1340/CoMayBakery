@@ -1,14 +1,14 @@
 import Image from "next/image";
-import BestSellerCarousel from "@/components/bestSellerCarousel";
-import Footer from "@/components/footer";
-import ServicesSession from "@/components/servicesSession";
+import BestSellerCarousel from "@/components/BestSellerCarousel";
+import Footer from "@/components/Footer";
+import ServicesSession from "@/components/ServicesSession";
 
 export default function Home() {
   return (
     <>
     <main className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative pt-16 mb-24 hero">
+      <div className="relative pt-16 hero">
         <div className="px-4 py-24 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
             {/* Left Column - Content */}

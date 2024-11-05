@@ -7,7 +7,7 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 
 import "@/app/globals.css";
 
-export default function Navbar() {
+export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {

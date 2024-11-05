@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 import Head from "next/head";
 import { IoPhonePortraitOutline } from "react-icons/io5";
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={` antialiased`}>
         <header className="shadow-sm">
-          <Navbar></Navbar>
+          <NavBar></NavBar>
         </header>
         {children}
         {/* Fixed Contact Icons */}

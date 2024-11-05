@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Head from "next/head";
 import { IoPhonePortraitOutline } from "react-icons/io5";

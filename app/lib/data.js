@@ -1,23 +1,25 @@
-import { Cake, Coffee, Gift, Utensils } from "lucide-react";
+import { GiCupcake, GiStairsCake  } from "react-icons/gi";
+import { GrGift } from "react-icons/gr";
+import { LuUtensils } from "react-icons/lu";
 
 export const services = [
   {
-    icon: <Cake className="w-8 h-8 text-white" />,
+    icon: <GiStairsCake className="w-8 h-8 text-white" />,
     title: "Bánh rau câu sinh nhật",
     description: "Những chiếc bánh rau câu độc đáo và đẹp mắt, là món quà tuyệt vời cho ngày sinh nhật đáng nhớ."
   },
   {
-    icon: <Gift className="w-8 h-8 text-white" />,
+    icon: <GrGift className="w-8 h-8 text-white" />,
     title: "Bánh rau câu cho dịp lễ",
     description: "Bánh rau câu được thiết kế đặc biệt cho các dịp lễ, mang đến không khí lễ hội và niềm vui."
   },
   {
-    icon: <Coffee className="w-8 h-8 text-white" />,
+    icon: <GiCupcake className="w-8 h-8 text-white" />,
     title: "Bánh rau câu cupcakes",
     description: "Những chiếc cupcake rau câu nhỏ xinh, hoàn hảo cho các bữa tiệc nhỏ và những khoảnh khắc đặc biệt."
   },
   {
-    icon: <Utensils className="w-8 h-8 text-white" />,
+    icon: <LuUtensils className="w-8 h-8 text-white" />,
     title: "Bánh rau câu ăn vặt",
     description: "Những miếng bánh rau câu ngon miệng, là món ăn vặt lý tưởng cho mọi thời điểm trong ngày."
   }

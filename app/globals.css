@@ -40,3 +40,15 @@ h1, h2, h3, h4, h5 ,h6 {
   font-family: "Lexend Deca", serif;
   font-optical-sizing: auto;
 }
+
+.hero {
+  background-image: radial-gradient(circle, #fde6e9, #fcd7dc, #fbc8d0, #f9b9c4, #f7aab9);
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #b21e4b !important;
+}

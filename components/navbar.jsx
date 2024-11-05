@@ -6,33 +6,33 @@ import "@/app/globals.css";
 
 export default function Navbar() {
   return (
-    <nav className="container mx-auto px-4 py-4 flex justify-between">
+    <nav className="container z-50 flex justify-between px-4 py-4 mx-auto">
       <div className="flex flex-row items-center gap-20">
       <div className="flex flex-row items-center gap-3">
-        <Image src="/logo.svg" alt="Logo" width={60} height={60} className="w-16 h-16"></Image>
+        <Image src="/logo.png" alt="Logo" width={60} height={60} className="w-16 h-16"></Image>
         <h1 className="text-xl font-bold text-wisp-pink-700 font-lexend-deca">Tiệm bánh Cỏ May</h1>
       </div>
       <div>
-        <Link href="/" className="text-gray-800 hover:text-wisp-pink-400 px-3 py-2 text-xl font-medium">
-          Home
+        <Link href="/" className="px-3 py-2 text-xl font-medium text-gray-800 hover:text-wisp-pink-400">
+          Trang chủ
         </Link>
         <Link
           href="/about"
-          className="text-gray-800 hover:text-wisp-pink-400 px-3 py-2 text-xl font-medium"
+          className="px-3 py-2 text-xl font-medium text-gray-800 hover:text-wisp-pink-400"
         >
-          About
+          Câu chuyện Bánh Cỏ May
         </Link>
         <Link
           href="/menu"
-          className="text-gray-800 hover:text-wisp-pink-400 px-3 py-2 text-xl font-medium"
+          className="px-3 py-2 text-xl font-medium text-gray-800 hover:text-wisp-pink-400"
         >
-          Menu
+          Bánh của tiệm
         </Link>
         <Link
           href="/contact"
-          className="text-gray-800 hover:text-wisp-pink-400 px-3 py-2 text-xl font-medium"
+          className="px-3 py-2 text-xl font-medium text-gray-800 hover:text-wisp-pink-400"
         >
-          Contact
+          Liên hệ
         </Link>
       </div>
       </div>

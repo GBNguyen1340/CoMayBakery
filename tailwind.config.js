@@ -24,6 +24,9 @@ module.exports = {
           950: "#470a1f",
         },
       },
+      backgroundImage: {
+        'cake-pattern': "url('/bg-02.png')",
+      },
     },
   },
   plugins: [],

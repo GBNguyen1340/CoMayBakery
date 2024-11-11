@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['freeimage.host', 'iili.io'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'freeimage.host',
+      },
+      {
+        protocol: 'https',
+        hostname: 'iili.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+    ],
   },
 };
 

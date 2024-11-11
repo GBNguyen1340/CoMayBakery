@@ -4,22 +4,22 @@ import { LuUtensils } from "react-icons/lu";
 
 export const services = [
   {
-    icon: <GiStairsCake className="w-8 h-8 text-white" />,
+    icon: <GiStairsCake className="w-8 h-8 text-white group-hover:text-wisp-pink-600" />,
     title: "Bánh rau câu sinh nhật",
     description: "Những chiếc bánh rau câu độc đáo và đẹp mắt, là món quà tuyệt vời cho ngày sinh nhật đáng nhớ."
   },
   {
-    icon: <GrGift className="w-8 h-8 text-white" />,
+    icon: <GrGift className="w-8 h-8 text-white group-hover:text-wisp-pink-600" />,
     title: "Bánh rau câu cho dịp lễ",
     description: "Bánh rau câu được thiết kế đặc biệt cho các dịp lễ, mang đến không khí lễ hội và niềm vui."
   },
   {
-    icon: <GiCupcake className="w-8 h-8 text-white" />,
+    icon: <GiCupcake className="w-8 h-8 text-white group-hover:text-wisp-pink-600" />,
     title: "Bánh rau câu cupcakes",
     description: "Những chiếc cupcake rau câu nhỏ xinh, hoàn hảo cho các bữa tiệc nhỏ và những khoảnh khắc đặc biệt."
   },
   {
-    icon: <LuUtensils className="w-8 h-8 text-white" />,
+    icon: <LuUtensils className="w-8 h-8 text-white group-hover:text-wisp-pink-600" />,
     title: "Bánh rau câu ăn vặt",
     description: "Những miếng bánh rau câu ngon miệng, là món ăn vặt lý tưởng cho mọi thời điểm trong ngày."
   }

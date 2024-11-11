@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500..700&family=Playwrite+GB+S&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #fff4f7;
+  --background: #F8F9FA;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #fff4f7;
+    --foreground: #F8F9FA;
   }
 }
 
@@ -21,13 +21,21 @@ body {
   background: var(--background);
   font-family: "Playwrite GB S", serif;
   font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
+  font-size: 18px;
+  line-height: 2.2rem;
 }
 
 h1, h2, h3, h4, h5 ,h6 {
-  font-family: "Lexend Deca", serif;
+  font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  letter-spacing: 0.025em;
+}
+
+p, ul, li {
+  line-height: 2.2rem !important;
 }
 
 .font-play-write {
@@ -36,8 +44,8 @@ h1, h2, h3, h4, h5 ,h6 {
 }
 
 
-.font-lexend-deca {
-  font-family: "Lexend Deca", serif;
+.font-lora {
+  font-family: "Lora", serif;
   font-optical-sizing: auto;
 }
 
@@ -51,4 +59,18 @@ h1, h2, h3, h4, h5 ,h6 {
 
 .slick-dots li.slick-active button:before {
   color: #b21e4b !important;
+}
+
+.slick-thumb {
+  bottom: -75px !important;
+}
+.slick-thumb li {
+  width: 70px !important;
+  height: 70px !important;
+  margin: 0 4px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.slick-thumb li.slick-active {
+  border: 2px solid #EC4899;
 }

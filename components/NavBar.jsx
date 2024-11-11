@@ -2,10 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Smartphone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { IoPhonePortraitOutline } from "react-icons/io5";
-
-import "@/app/globals.css";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +26,7 @@ export default function NavBar() {
                 height={80}
                 className="w-20 h-20"
               ></Image>
-              <h1 className="pl-5 text-xl font-bold text-wisp-pink-700 font-lexend-deca">
+              <h1 className="pl-5 text-3xl font-bold text-wisp-pink-700 font-lora">
                 Tiệm bánh Cỏ May
               </h1>
             </Link>
@@ -44,13 +42,13 @@ export default function NavBar() {
                 Trang chủ
               </Link>
               <Link
-                href="/about"
+                href="/menu"
                 className="px-3 py-2 text-lg font-medium text-gray-800 hover:text-wisp-pink-600"
               >
                 Menu
               </Link>
               <Link
-                href="/menu"
+                href="/about"
                 className="px-3 py-2 text-lg font-medium text-gray-800 hover:text-wisp-pink-600"
               >
                 Câu chuyện về bánh Cỏ May
@@ -106,14 +104,14 @@ export default function NavBar() {
               Trang chủ
             </Link>
             <Link
-              href="/about"
+              href="/menu"
               className="block px-3 py-2 text-base font-medium text-gray-800 transition-colors duration-200 rounded-md hover:text-gray-600 hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               Menu
             </Link>
             <Link
-              href="/menu"
+              href="/about"
               className="block px-3 py-2 text-base font-medium text-gray-800 transition-colors duration-200 rounded-md hover:text-gray-600 hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >

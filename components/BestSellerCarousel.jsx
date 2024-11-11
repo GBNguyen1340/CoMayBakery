@@ -43,9 +43,9 @@ const BestSellerCarousel = () => {
   };
 
   return (
-    <section className="py-12 bg-wisp-pink-200">
+    <section className="py-24 bg-wisp-pink-200">
       <div className="container px-4 mx-auto">
-        <h2 className="mt-8 mb-8 text-4xl font-bold text-center text-gray-800">
+        <h2 className="mb-16 text-4xl font-bold text-center text-gray-800">
           Được nhiều khách hàng yêu thích
         </h2>
 

@@ -13,7 +13,8 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-white shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-10 bg-white shadow-sm navbar">
+      <div className="menu_wave"></div>
       <div className="p-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

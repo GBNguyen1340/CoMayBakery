@@ -9,9 +9,11 @@ export default function Home() {
       <Hero></Hero>
       <ServicesSession></ServicesSession>
       <BestSellerCarousel></BestSellerCarousel>
-      <div className="container px-4 py-24 mx-auto sm:px-6 lg:px-8 bg-cake-pattern">
-        <h1 className="mb-16 text-3xl font-bold text-center">Các mẫu bánh tại tiệm</h1>
-        <ProductList></ProductList>
+      <div className="bg-cake-pattern">
+        <div className="container px-4 py-24 mx-auto sm:px-6 lg:px-8">
+          <h1 className="mb-16 text-5xl font-semibold text-center text-wisp-pink-700">Các mẫu bánh tại tiệm</h1>
+          <ProductList></ProductList>
+        </div>
       </div>
     </>
   );

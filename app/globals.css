@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500..700&family=Playwrite+GB+S&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500..700&family=Playwrite+GB+S&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #F8F9FA;
+  --background: #f8f9fa;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #F8F9FA;
+    --foreground: #f8f9fa;
   }
 }
 
@@ -27,14 +27,21 @@ body {
   line-height: 2.2rem;
 }
 
-h1, h2, h3, h4, h5 ,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-style: normal;
   letter-spacing: 0.025em;
 }
 
-p, ul, li {
+p,
+ul,
+li {
   line-height: 2.2rem !important;
 }
 
@@ -43,7 +50,6 @@ p, ul, li {
   font-optical-sizing: auto;
 }
 
-
 .font-lora {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
@@ -51,6 +57,37 @@ p, ul, li {
 
 .hero {
   background-image: radial-gradient(circle, #fde6e9, #fcd7dc, #fbc8d0, #f9b9c4, #f7aab9);
+}
+
+.navbar .menu_wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #fff;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: bottom;
+  -webkit-mask-size: cover;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.menu_wave {
+  -webkit-mask-image: url("/shape_menu_1.svg");
+  -webkit-mask-position: bottom !important;
+}
+
+.hero_wave {
+  position: relative;
+  display: block;
+  background-color: transparent;
+  -webkit-mask-image: url("/shape_menu_1.svg");
+  -webkit-mask-position: bottom;
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  margin-bottom: -40px;
+  z-index: 8;
 }
 
 .slick-dots li button:before {
@@ -72,5 +109,5 @@ p, ul, li {
   overflow: hidden;
 }
 .slick-thumb li.slick-active {
-  border: 2px solid #EC4899;
+  border: 2px solid #ec4899;
 }

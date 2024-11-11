@@ -7,7 +7,7 @@ export default function ProductLayout({ children }) {
       <div
         className="relative py-24 mb-3 bg-center bg-cover"
         style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/1.jpg')`,
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/1.jpg')`,
         }}
       >
         <div className="container mx-auto">

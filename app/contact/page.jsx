@@ -6,9 +6,9 @@ export default function Contact() {
     <div>
       {/* Header Section with Background */}
       <div
-        className="relative py-24 mb-3 bg-center bg-cover"
+        className="relative py-24 mb-3 bg-center bg-cover lg:py-36"
         style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/call-to-action-bg.jpg')`,
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/call-to-action-bg.jpg')`,
         }}
       >
         <div className="container mx-auto">

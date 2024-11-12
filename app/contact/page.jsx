@@ -33,14 +33,14 @@ export default async function Contact() {
           </div>
         </div>
       </div>
-      <div className="container px-4 py-16 mx-auto sm:px-6 lg:px-8">
-        <div className="flex flex-row justify-around">
+      <div className="container px-4 py-16 mx-auto sm:px-6 lg:px-20">
+        <div className="flex flex-row justify-around flex-1 gap-4">
           {/* Left Column - Contact Information */}
-          <div className="flex flex-col justify-start pt-8 space-y-6">
+          <div className="flex flex-col justify-start px-4 py-8 space-y-6 sm:px-4 lg:px-12">
             <h1 className="text-3xl font-bold text-wisp-pink-800">Tiệm bánh Cỏ May</h1>
 
             <div className="space-y-4">
-              <div>
+              <div className="w-[65%]">
                 <h2 className="text-xl font-semibold">Địa chỉ</h2>
                 <p className="mt-1">{contactInfo?.address}</p>
               </div>

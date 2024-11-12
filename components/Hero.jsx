@@ -34,13 +34,6 @@ const Hero = () => {
                     className="object-cover rounded-lg shadow-lg"
                   />
                 </div>
-                <Image
-                  src="/shape-02.png"
-                  alt=""
-                  width={800}
-                  height={800}
-                  className="absolute object-cover -top-64 -z-10"
-                />
               </div>
             </div>
           </div>

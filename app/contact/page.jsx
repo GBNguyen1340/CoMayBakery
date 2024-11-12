@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getContactInfo } from "../services/product.service";
 
-export default function Contact() {
+export default async function Contact() {
+  const contactInfo = await getContactInfo();
   return (
     <div>
       {/* Header Section with Background */}
@@ -25,20 +27,22 @@ export default function Contact() {
             </nav>
 
             {/* Title */}
-            <h1 className="text-4xl font-bold text-gray-900">Bánh Cỏ May luôn muốn nghe tâm sự từ bạn</h1>
+            <h1 className="text-4xl font-bold text-gray-900">
+              Bánh Cỏ May luôn muốn nghe tâm sự từ bạn
+            </h1>
           </div>
         </div>
       </div>
       <div className="container px-4 py-16 mx-auto sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="flex flex-row justify-around">
           {/* Left Column - Contact Information */}
-          <div className="flex flex-col justify-center space-y-6">
+          <div className="flex flex-col justify-start pt-8 space-y-6">
             <h1 className="text-3xl font-bold text-wisp-pink-800">Tiệm bánh Cỏ May</h1>
 
             <div className="space-y-4">
               <div>
                 <h2 className="text-xl font-semibold">Địa chỉ</h2>
-                <p className="mt-1">123 Đường ABC, Quận XYZ, TP.HCM</p>
+                <p className="mt-1">{contactInfo.address}</p>
               </div>
 
               <div>
@@ -47,20 +51,20 @@ export default function Contact() {
                   <p>
                     <span className="font-medium">Điện thoại:</span>{" "}
                     <Link
-                      href="tel:+84123456789"
+                      href={`tel:${contactInfo.phoneNumber}`}
                       className="text-wisp-pink-600 hover:text-wisp-pink-700"
                     >
-                      0123.456.789
+                      {contactInfo.phoneNumber}
                     </Link>
                   </p>
                   <p>
                     <span className="font-medium">Zalo:</span>{" "}
                     <Link
-                      href="https://zalo.me/0123456789"
+                      href={`https://zalo.me/${contactInfo.hotline}`}
                       target="_blank"
                       className="text-wisp-pink-600 hover:text-wisp-pink-700"
                     >
-                      0123.456.789
+                      {contactInfo.hotline}
                     </Link>
                   </p>
                 </div>
@@ -69,33 +73,37 @@ export default function Contact() {
               <div>
                 <h2 className="text-xl font-semibold">Mạng xã hội</h2>
                 <div className="flex gap-4 mt-2">
-                  <Link
-                    href="https://facebook.com/tiembanhcomay"
-                    target="_blank"
-                    className="text-wisp-pink-600 hover:text-wisp-pink-700"
-                  >
-                    Facebook
-                  </Link>
-                  <Link
-                    href="https://instagram.com/tiembanhcomay"
-                    target="_blank"
-                    className="text-wisp-pink-600 hover:text-wisp-pink-700"
-                  >
-                    Instagram
-                  </Link>
+                  {contactInfo.socialLinks.map((link) => (
+                    <Link
+                      href={link.url}
+                      target="_blank"
+                      className="text-wisp-pink-600 hover:text-wisp-pink-700"
+                      key={link._Id}
+                    >
+                      {link.platform}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Column - Image */}
-          <div className="relative w-full h-[400px] md:h-[500px]">
+          <div className="relative">
             <Image
-              src="/contact.jpg" // Make sure to add your image to the public/images folder
+              src="/floralLine.png" // Make sure to add your image to the public/images folder
               alt="Tiệm bánh cỏ may"
-              fill
-              className="object-cover rounded-lg"
+              width={300}
+              height={500}
+              className="absolute -z-10 -left-40 top-20"
+            />
+            <Image
+              src="/contact.png" // Make sure to add your image to the public/images folder
+              alt="Tiệm bánh cỏ may"
+              width={400}
+              height={400}
               priority
+              className="object-cover rounded-t-full shadow-xl"
             />
           </div>
         </div>

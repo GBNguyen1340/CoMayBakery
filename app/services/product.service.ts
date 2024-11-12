@@ -1,6 +1,5 @@
-
 import { type SanityDocument } from "next-sanity";
-import { client } from '../sanity/client';
+import { client } from "../sanity/client";
 
 export async function getProducts(): Promise<SanityDocument[]> {
   const query = `
@@ -14,8 +13,8 @@ export async function getProducts(): Promise<SanityDocument[]> {
         "alt": mainImage.alt
       }
     }
-  `
-  return client.fetch(query)
+  `;
+  return client.fetch(query);
 }
 
 export async function getProduct(slug: string): Promise<SanityDocument | null> {
@@ -36,11 +35,11 @@ export async function getProduct(slug: string): Promise<SanityDocument | null> {
         "alt": asset->alt
       }
     }
-  `
-  return client.fetch(query, { slug })
+  `;
+  return client.fetch(query, { slug });
 }
 
-export async function getRelatedProducts(currentProductId) {
+export async function getRelatedProducts(currentProductId: string): Promise<SanityDocument | null> {
   const query = `
     *[_type == "product" && _id != $currentProductId][0...4] {
       _id,
@@ -52,6 +51,17 @@ export async function getRelatedProducts(currentProductId) {
         "alt": mainImage.alt
       }
     }
-  `
-  return client.fetch(query, { currentProductId })
+  `;
+  return client.fetch(query, { currentProductId });
+}
+
+export async function getContactInfo(): Promise<SanityDocument | null> {
+  try {
+    const query = `*[_type == "contactInfo"][0]`;
+    const contactInfo = await client.fetch(query);
+    return contactInfo;
+  } catch (error) {
+    console.error("Failed to fetch contact info:", error);
+    throw error;
+  }
 }

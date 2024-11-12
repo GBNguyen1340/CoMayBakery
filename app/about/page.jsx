@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="container px-4 py-16 mx-auto sm:px-6 lg:px-8">
+    <div className="container px-4 py-16 mx-auto sm:px-6 lg:px-8 bg-cake-pattern">
       <div className="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
         {/* Left Column - Image */}
-        <div className="relative w-full h-[500px] md:h-[600px]">
+        <div className="relative w-full h-[500px] md:h-[730px]">
           <Image
-            src="/images/about-image.jpg" // Add your image to public/images folder
+            src="/8.png" // Add your image to public/images folder
             alt="Tiệm bánh cỏ may"
             fill
             className="object-cover rounded-t-full shadow-xl"
@@ -16,7 +16,7 @@ export default function About() {
         </div>
 
         {/* Right Column - Story */}
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col px-8 space-y-6">
           <h1 className="text-4xl font-bold text-wisp-pink-700">
             Câu chuyện về bánh cỏ may
           </h1>
@@ -48,6 +48,13 @@ export default function About() {
               thơm ngon, mà còn cảm nhận được tình yêu và sự chân thành mà chúng tôi 
               gửi gắm trong từng sản phẩm.
             </p>
+            <Image
+            src="/sign2.png" // Add your image to public/images folder
+            alt="Tiệm bánh cỏ may"
+            width={500}
+            height={200}
+            className="mt-4"
+          />
           </div>
         </div>
       </div>

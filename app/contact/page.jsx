@@ -42,7 +42,7 @@ export default async function Contact() {
             <div className="space-y-4">
               <div>
                 <h2 className="text-xl font-semibold">Địa chỉ</h2>
-                <p className="mt-1">{contactInfo.address}</p>
+                <p className="mt-1">{contactInfo?.address}</p>
               </div>
 
               <div>
@@ -51,20 +51,20 @@ export default async function Contact() {
                   <p>
                     <span className="font-medium">Điện thoại:</span>{" "}
                     <Link
-                      href={`tel:${contactInfo.phoneNumber}`}
+                      href={`tel:${contactInfo?.phoneNumber}`}
                       className="text-wisp-pink-600 hover:text-wisp-pink-700"
                     >
-                      {contactInfo.phoneNumber}
+                      {contactInfo?.phoneNumber}
                     </Link>
                   </p>
                   <p>
                     <span className="font-medium">Zalo:</span>{" "}
                     <Link
-                      href={`https://zalo.me/${contactInfo.hotline}`}
+                      href={`https://zalo.me/${contactInfo?.hotline}`}
                       target="_blank"
                       className="text-wisp-pink-600 hover:text-wisp-pink-700"
                     >
-                      {contactInfo.hotline}
+                      {contactInfo?.hotline}
                     </Link>
                   </p>
                 </div>
@@ -73,14 +73,14 @@ export default async function Contact() {
               <div>
                 <h2 className="text-xl font-semibold">Mạng xã hội</h2>
                 <div className="flex gap-4 mt-2">
-                  {contactInfo.socialLinks.map((link) => (
+                  {contactInfo?.socialLinks.map((link) => (
                     <Link
-                      href={link.url}
+                      href={link?.url}
                       target="_blank"
                       className="text-wisp-pink-600 hover:text-wisp-pink-700"
-                      key={link._Id}
+                      key={link?._Id}
                     >
-                      {link.platform}
+                      {link?.platform}
                     </Link>
                   ))}
                 </div>

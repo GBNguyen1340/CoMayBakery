@@ -1,9 +1,9 @@
 // components/Footer.js
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
-const Footer = () => {
+export default async function Footer() {
+  const contactInfo = await getContactInfo();
   return (
     <footer className="py-8 text-white bg-gray-800">
       <div className="container px-4 mx-auto">
@@ -12,15 +12,15 @@ const Footer = () => {
           {/* Column 1: Logo, Address, and Telephone */}
           <div className="flex flex-col items-start">
             <Image
-              src="/logo.svg" // replace with your logo path
-              alt="Cake Shop Logo"
+              src="/logo.svg"
+              alt="Tiệm bánh Cỏ May"
               width={150}
               height={50}
               className="mb-4"
             />
-            <p className="mb-2">123 Cake Street, Sweet City</p>
-            <p className="mb-2">Phone: (123) 456-7890</p>
-            <p>Email: contact@cakestore.com</p>
+            <p className="mb-2">{contactInfo.address}</p>
+            <p className="mb-2">Phone: {contactInfo.phoneNumber}</p>
+            <p className="mb-2">Hotline: {contactInfo.hotline}</p>
           </div>
 
           {/* Column 2: Navigation Links */}
@@ -44,30 +44,16 @@ const Footer = () => {
           <div className="flex flex-col">
             <h3 className="mb-4 text-lg font-semibold">Follow Us</h3>
             <div className="flex space-x-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FaFacebook className="text-2xl text-white hover:text-blue-500" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="text-2xl text-white hover:text-pink-500" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="text-2xl text-white hover:text-blue-400" />
-              </a>
+              {contactInfo?.socialLinks.map((link) => (
+                <Link
+                  href={link?.url}
+                  target="_blank"
+                  className="text-wisp-pink-600 hover:text-wisp-pink-700"
+                  key={link?._Id}
+                >
+                  {link?.platform}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -93,6 +79,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

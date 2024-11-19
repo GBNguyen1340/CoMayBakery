@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cỏ May Bakery: Online Bakery Website
+
+Cỏ May Bakery is a web application showcasing and managing bakery products, built using **Next.js** and **Sanity CMS**, and deployed on **Vercel**.
+
+---
+
+## Features
+
+- Showcase of bakery products with a modern UI.
+- Managed content using **Sanity CMS**.
+- Optimized for deployment on **Vercel**.
+- Built with the latest features of **Next.js**.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v16 or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- A [Sanity](https://www.sanity.io/) project set up.
+- A [Vercel](https://vercel.com/) account for deployment.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/co-may-bakery.git
+   cd co-may-bakery
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+   - Create a `.env.local` file in the root directory.
+   - Add the following environment variables:
+     ```env
+     NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
+     NEXT_PUBLIC_SANITY_DATASET=production
+     NEXTAUTH_URL=http://localhost:3000
+     NEXTAUTH_SECRET=your_secret_key
+     ```
+
+4. Connect to Sanity CMS:
+   - Replace `your_sanity_project_id` with your actual Sanity project ID.
+   - Ensure your Sanity project has the required schemas for bakery products.
+
+### Running Locally
+
+To run the application in development mode:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+### Deploy on Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Install the Vercel CLI if not already installed:
+   ```bash
+   npm install -g vercel
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Log in to Vercel:
+   ```bash
+   vercel login
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Deploy the project:
+   ```bash
+   vercel
+   ```
 
-## Deploy on Vercel
+4. Set environment variables in Vercel:
+   - Go to your project dashboard on Vercel.
+   - Add the same environment variables (`NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET`, `NEXTAUTH_URL`, `NEXTAUTH_SECRET`) under the **Environment Variables** section.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Your application will be live at the Vercel-provided URL.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Sanity CMS Setup
+
+1. Install the Sanity CLI globally if not already installed:
+   ```bash
+   npm install -g @sanity/cli
+   ```
+
+2. Navigate to the `sanity` folder (if included in the project):
+   ```bash
+   cd sanity
+   ```
+
+3. Login to your Sanity account and initialize the project:
+   ```bash
+   sanity login
+   sanity init
+   ```
+
+4. Deploy your Sanity studio:
+   ```bash
+   sanity deploy
+   ```
+
+---
+
+## Project Structure
+
+```
+├── components/        # Reusable components
+├── pages/             # Application routes
+├── public/            # Static assets
+├── styles/            # Global and component-level styles
+├── .env.local         # Environment variables
+├── next.config.js     # Next.js configuration
+├── package.json       # Project dependencies
+```
+
+---
+
+## Useful Scripts
+
+- `npm run dev`: Run the development server.
+- `npm run build`: Build the application for production.
+- `npm start`: Start the application in production mode.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request for any improvements or bug fixes.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

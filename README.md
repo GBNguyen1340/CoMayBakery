@@ -39,20 +39,6 @@ Before running the project, ensure you have the following installed:
    yarn install
    ```
 
-3. Set up environment variables:
-   - Create a `.env.local` file in the root directory.
-   - Add the following environment variables:
-     ```env
-     NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
-     NEXT_PUBLIC_SANITY_DATASET=production
-     NEXTAUTH_URL=http://localhost:3000
-     NEXTAUTH_SECRET=your_secret_key
-     ```
-
-4. Connect to Sanity CMS:
-   - Replace `your_sanity_project_id` with your actual Sanity project ID.
-   - Ensure your Sanity project has the required schemas for bakery products.
-
 ### Running Locally
 
 To run the application in development mode:
@@ -85,37 +71,7 @@ The application will be available at [http://localhost:3000](http://localhost:30
    ```bash
    vercel
    ```
-
-4. Set environment variables in Vercel:
-   - Go to your project dashboard on Vercel.
-   - Add the same environment variables (`NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET`, `NEXTAUTH_URL`, `NEXTAUTH_SECRET`) under the **Environment Variables** section.
-
 5. Your application will be live at the Vercel-provided URL.
-
----
-
-## Sanity CMS Setup
-
-1. Install the Sanity CLI globally if not already installed:
-   ```bash
-   npm install -g @sanity/cli
-   ```
-
-2. Navigate to the `sanity` folder (if included in the project):
-   ```bash
-   cd sanity
-   ```
-
-3. Login to your Sanity account and initialize the project:
-   ```bash
-   sanity login
-   sanity init
-   ```
-
-4. Deploy your Sanity studio:
-   ```bash
-   sanity deploy
-   ```
 
 ---
 

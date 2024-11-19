@@ -1,9 +1,8 @@
 # Cỏ May Bakery: Online Bakery Website
-
+---
 Cỏ May Bakery is a web application showcasing and managing bakery products, built using **Next.js** and **Sanity CMS**, and deployed on **Vercel**.
 Check example website here: https://co-may-bakery.vercel.app/
 BackEnd repo: https://github.com/GBNguyen1340/comay_bakery_sanity
----
 
 ## Features
 
